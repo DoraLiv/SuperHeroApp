@@ -32,9 +32,10 @@ namespace SuperHeroApp
             double cookiesearned = workintotal * hourlycookies;
             double cookiesearnedperdeed = Math.Round(workaverage * hourlycookies,2);
             Console.WriteLine("~~~~~~~~*****~~~~~~~*****~~~~~~~*****~~~~~~~\n");
-            Console.WriteLine($"Anti can buy {numofcookies} cookies");
-            Console.WriteLine($"Anti's daily salary is {dailysalary} monies. ");
-            if (isevil == true)
+            Console.WriteLine($"Anti works {workintotal} hours a day.\nIn average it takes him {workaverage} hours to do one deed.");
+            Console.WriteLine($"Anti's monthly salary is {salary} monies, his daily salary is {dailysalary} monies.");
+            Console.WriteLine($"Anti can buy {numofcookies} cookies with his monthly salary.");
+                if (isevil == true)
             {
                 Console.WriteLine("Anti will destroy the Cookie city!");
             }
@@ -42,8 +43,8 @@ namespace SuperHeroApp
             {
                 Console.WriteLine("Anti is not evil, he would not intentionally hurt the Cookie city.");
             }
-            Console.WriteLine($"Anti works {workintotal} hours a day.\nIn average it takes him {workaverage} hours to do one deed.");
-            Console.WriteLine($"Anti earns {cookiesearned} cookies for his work, averaging {cookiesearnedperdeed} cookies per deed.");
+            
+            Console.WriteLine($"Anti earns {cookiesearned} cookies for his good work, averaging {cookiesearnedperdeed} cookies per deed.");
 
             }
     }
