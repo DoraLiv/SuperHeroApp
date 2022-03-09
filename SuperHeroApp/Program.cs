@@ -23,7 +23,7 @@ namespace SuperHeroApp
             Console.WriteLine($"\nHero Powers :\n  *{heroPower1} \n  *{heroPower2} \n  *{heroPower3}\n\n");
 
             //work and cookies
-
+/*
             double cookieprice = 1.35;
             double numofcookies = Math.Floor(salary / cookieprice);
             double dailysalary = Math.Round(salary / 30, 2);
@@ -45,7 +45,41 @@ namespace SuperHeroApp
             }
             
             Console.WriteLine($"Anti earns {cookiesearned} cookies for his good work, averaging {cookiesearnedperdeed} cookies per deed.");
+*/
+            //The deed grading
+
+            Console.WriteLine("~~~~~~~~*****~~~~~~~*****~~~~~~~*****~~~~~~~\n"); 
+            Console.WriteLine("DA DEED!! What did you do?? How well did you do it?\n");
+
+            Console.WriteLine("How would you grade my deed? (Enter a grade A - G)");
+            char deedgrade = Char.ToUpper(char.Parse(Console.ReadLine()));
+            switch (deedgrade)
+            {
+                case 'A':
+                case 'B':
+                    Console.WriteLine("Perfect! You are so brave!");
+                    break;
+                case 'C':
+                    Console.WriteLine("Good! But You can do better!");
+                    break;
+                case 'D':
+                case 'E':
+                    Console.WriteLine("It is not good! You should choose your bad or good side!");
+                    break;
+                case 'F':
+                    Console.WriteLine("You have FAILED!");
+                    break;
+                case 'G':
+                    Console.WriteLine("Bad, you are true villain!");
+                    break;
+                case 'H':
+                    Console.WriteLine("You are going straight to HELL!");
+                    break;
+                default:
+                    Console.WriteLine("No one can be THAT bad!!? O.O");
+                    break;
 
             }
+        }
     }
 }
