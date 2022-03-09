@@ -49,36 +49,36 @@ namespace SuperHeroApp
             //The deed grading
 
             Console.WriteLine("~~~~~~~~*****~~~~~~~*****~~~~~~~*****~~~~~~~\n"); 
-            Console.WriteLine("DA DEED!! What did you do?? How well did you do it?\n");
+            Console.WriteLine("Anti helped an old lady to cross the street!\n");
 
-            Console.WriteLine("How would you grade my deed? (Enter a grade A - G)");
+            Console.WriteLine("How would you grade Anti's deed?");
             char deedgrade = Char.ToUpper(char.Parse(Console.ReadLine()));
             switch (deedgrade)
             {
                 case 'A':
                 case 'B':
-                    Console.WriteLine("Perfect! You are so brave!");
+                    Console.WriteLine("Perfect! He is so brave!");
                     break;
                 case 'C':
-                    Console.WriteLine("Good! But You can do better!");
+                    Console.WriteLine("Good! But he can do better!");
                     break;
                 case 'D':
                 case 'E':
-                    Console.WriteLine("It is not good! You should choose your bad or good side!");
+                    Console.WriteLine("It is not good! He should choose his bad or good side!");
                     break;
                 case 'F':
-                    Console.WriteLine("You have FAILED!");
+                    Console.WriteLine("He has FAILED to do a good job!");
                     break;
                 case 'G':
-                    Console.WriteLine("Bad, you are true villain!");
+                    Console.WriteLine("Bad, he is a true villain!");
                     break;
                 case 'H':
-                    Console.WriteLine("You are going straight to HELL!");
+                    Console.WriteLine("He is going straight to HELL!");
                     break;
                 default:
                     Console.WriteLine("No one can be THAT bad!!? O.O");
                     break;
-
+                    
             }
         }
     }
