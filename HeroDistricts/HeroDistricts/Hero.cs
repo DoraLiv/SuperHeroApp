@@ -107,7 +107,41 @@ namespace SuperHeroApp
             cookies += Cookies;
         }
 
-       
         
     }
+
+    internal class District
+    {
+        public string Title { get; set; }
+        public string City { get; set; }
+
+        public int DistrictID { get; set; }
+        public List<Hero> HeroesInTheDistrict { get; set; }
+
+        public District()
+        {
+            this.Title = "not determined";
+            this.City = "not determined";
+            this.DistrictID = 0;
+            this.HeroesInTheDistrict = new List<Hero>();
+        }
+
+        public District(string title, string city, int districtID, List<Hero> herosinthedistrict)
+        {
+            Title = title;
+            City = city;
+            DistrictID = districtID;
+            HeroesInTheDistrict = herosinthedistrict;
+        }
+        //public string toString();
+        
+        //bool addNewHero();
+
+        //Hero removeHero(int index);
+
+        //float calculateAvgLevelInDistrict();
+
+
+    }
+
 }

@@ -8,7 +8,7 @@ namespace SuperHeroApp
                "Time manipulation", "Eating unlimited amounts of cookies", 30, 2000, 1452, 'A');
             Hero hero2 = new Hero("Paul", "Neige", "Peng", 35, 003, HeroType.Hero, 25, "Freezing breath", "Killer looks", "Future prediction",
                 150, 3, 1649982, 'A');
-            Hero hero3 = new Hero("Robert", "Runner", "Kylo", 19, 189, HeroType.Hero, 4, "The Force", "Lightsaber fighting skills",
+            Hero hero3 = new Hero("John", "Runner", "Kylo", 19, 189, HeroType.Hero, 4, "The Force", "Lightsaber fighting skills",
                 "Math", 65, 3, 674, 'E');
             Hero hero4 = new Hero ("John", "Valentine", "Evron", 40, 057, HeroType.Antihero, 13, "Persuasion", "Perfect vision",
             "Killer voice", 80, 54, 10453, 'B');
@@ -240,35 +240,30 @@ namespace SuperHeroApp
                                         }
                                         else if (namesearch !="*")
                                         {
-                                            
 
-                                            var foundname = Guild.Find(find => find.Name == namesearch);
-                                            var foundsurname = Guild.Find(find => find.Surname == namesearch);
-                                            var foundnickname = Guild.Find(find => find.Nickname == namesearch);
-                                            if (foundname != null)
+                                            var foundname = Guild.Where(find => find.Name == namesearch).ToList();
+                                            foreach (Hero foundhero in foundname)
                                             {
-                                                foundname.PrintInfo();
-                                            } 
-                                            if (foundsurname != null)
-                                            {
-                                                foundsurname.PrintInfo();
+                                                foundhero.PrintInfo();
                                             }
-                                            if (foundnickname != null)
+                                            var foundsurname = Guild.Where(find => find.Surname == namesearch).ToList();
+                                            foreach (Hero foundhero in foundsurname)
                                             {
-                                                foundnickname.PrintInfo();
+                                                foundhero.PrintInfo();
                                             }
-                                            else if (foundname == null && foundsurname == null && foundsurname == null)
+                                            var foundnickname = Guild.Where(find => find.Nickname == namesearch).ToList();
+                                            foreach (Hero foundhero in foundnickname)
+                                            {
+                                                foundhero.PrintInfo();
+                                            }
+                                            /* šis nestrtādā!!!!!!
+                                            if (foundname == null && foundsurname == null && foundsurname == null)
                                             {
                                                 Console.WriteLine("There are no heroes with this name, surname or nickname. Try again!");
                                             }
-                                            
+                                            */
                                         }
-                                        else
-                                        {
-                                            Console.WriteLine("Invalid input! Try again!");
-                                        }
-
-
+                                        
                                     } while (stringsearch);
                                     break;
                                 case "*":
